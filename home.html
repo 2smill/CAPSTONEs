@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bugallon Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="https://scontent.fcrk1-4.fna.fbcdn.net/v/t1.15752-9/383833228_144264542095264_5907033885697891503_n.png?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHvqYbTgQYv4nleCkd9r9zo7ryn06OqclruvKfTo6pyWgoOZoTF_SjLlASrqccEVRG7lZDBy4woF7f8VIYMQltJ&_nc_ohc=Z9HjpMhOnGwAX9LaKgX&_nc_ht=scontent.fcrk1-4.fna&oh=03_AdTVyzWVj_NH8315NCyGotSM6YzCy5J9AiQD9ak7u9-M0A&oe=6545FBB9" alt="">
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Dashboard</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                
+                <ul class="menu-links">
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notification</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li>
+                    <a href="loginAdmin.html">
+                        <i class='bx bx-home-alt icon'></i>
+                        <span class="text nav-text">Administrator</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+
+        <div class="text">Lalawigan ng Bugallon Pangasinan</div>
+
+        <div class="container mx-auto p-4">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <div class="post">
+                <img src="https://via.placeholder.com/150" alt="Post Image" class="post-image">
+                <h2 class="post-title"></h2>
+                <p class="post-content">
+                    
+                </p>
+                <p class="post-reqs">
+                    
+                </p>
+                <p class="post-date">
+                    
+                </p>
+                <div class="post-actions">
+                    <button class="update-button">Update</button>
+                    <button class="reset-button">Reset</button>
+                </div>
+            </div>
+            
+            <!-- Add more posts here -->
+        </div>
+    </div> 
+</section>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+
+        mobileMenuToggle.addEventListener("click", () => {
+            if (sidebar.style.display === "block") {
+                sidebar.style.display = "none"; // Hide the sidebar
+            } else {
+                sidebar.style.display = "block"; // Show the sidebar
+            }
+        });
+    </script>
+    
+    <script>
+        const body = document.querySelector('body');
+        const sidebar = body.querySelector('.sidebar');
+        const toggle = body.querySelector(".toggle");
+        
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+        
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        });
+        
+    </script>
+</body>
+</html>
